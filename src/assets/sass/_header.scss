@@ -1,0 +1,257 @@
+header {
+    position: relative;
+
+    .header-nav {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        padding: 15px 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo-and-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 50px;
+
+            .logo {
+                color: $maintext;
+                width: max-content;
+
+                h1 {
+                    margin-bottom: 0;
+                }
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                padding: 15px 35px;
+                border-radius: 8px;
+                background-color: $mainbg;
+
+                .menu-item {
+                    color: $maintext;
+                    font-size: 16px;
+                    text-decoration: none;
+                }
+
+                .lang {
+                    color: $maintext;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    column-gap: 15px;
+                    position: relative;
+                    cursor: pointer;
+
+                    .item-submenu {
+                        position: absolute;
+                        border-radius: 10px;
+                        z-index: 2;
+                        left: -5px;
+                        top: 180%;
+                        padding: 15px 25px;
+                        background-color: $mainbg;
+                        display: none;
+
+                        .langs {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            row-gap: 10px;
+
+                            a {
+                                text-decoration: none;
+                                color: $maintext;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .header-btns {
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+            position: relative;
+
+
+            button {
+                background-color: $mainbg;
+                color: $maintext;
+                border: none;
+                border-radius: 10px;
+                padding: 15px;
+                position: relative;
+            }
+
+            .watchlist {
+                display: none;
+                position: absolute;
+                z-index: 2;
+                top: 100%;
+                left: -100%;
+                background-color: $mainbg;
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+
+                .close {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    position: relative;
+
+                    .icon-close {
+                        width: 30px;
+                        height: 30px;
+                        color: $maintext;
+                        background-color: red;
+                        font-size: 18px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: bold;
+                        cursor: pointer;
+                        position: absolute;
+                        z-index: 2;
+                        right: -10px;
+                        top: -10px;
+                        background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+                        box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+                        backdrop-filter: blur(7.5px);
+                    }
+                }
+
+                .liked-films {
+                    display: flex;
+                    flex-direction: column;
+                    overflow-y: scroll;
+                    row-gap: 8px;
+                    width: 100%;
+                    height: 100%;
+                    padding: 15px;
+
+                    .liked-movie {
+                        width: 100%;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        column-gap: 10px;
+                        position: relative;
+
+                        .img-liked {
+                            width: 80px;
+                            height: 100%;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .name-liked {
+                            color: $maintext;
+                            font-size: 15px;
+                        }
+
+                        .close {
+                            font-size: 18px;
+                            color: $maintext;
+                            width: max-content;
+                            position: absolute;
+                            z-index: 2;
+                            right: 8px;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+
+            .burger-menu {
+                width: max-content;
+                cursor: pointer;
+                display: none;
+
+                .burger-inner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: $maintext;
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+
+    .image-header {
+        filter: brightness(60%);
+
+        img {
+            width: 100%;
+            height: 350px;
+
+        }
+    }
+}
+
+.liked-films::-webkit-scrollbar {
+    width: 6px;
+}
+
+.liked-films::-webkit-scrollbar-track {
+    background: grey;
+}
+
+.liked-films::-webkit-scrollbar-thumb {
+    background: #1F1F1F;
+}
+
+.block-menu {
+    display: block !important;
+}
+
+@media (max-width:576px) {
+    .header-nav {
+        padding: 15px !important;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    .header-btns {
+        column-gap: 10px !important;
+
+        button {
+            padding: 10px !important;
+        }
+
+        .burger-menu {
+            display: block !important;
+        }
+
+        .watchlist {
+            left: -65% !important;
+        }
+    }
+
+    .image-header {
+        img {
+            height: 200px !important;
+        }
+    }
+}

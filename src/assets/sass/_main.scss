@@ -1,0 +1,154 @@
+main {
+    background-color: $mainbg2;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px -70px 90px $mainbg2;
+    padding-top: 5rem;
+    height: 100vh;
+
+    .swiper-section-1 {
+        height: max-content;
+        overflow: visible;
+
+        .slide-movie {
+            display: flex;
+            flex-direction: column;
+            width: 280px;
+            border-radius: 10px;
+            cursor: pointer;
+            overflow: hidden;
+
+
+            .img-movie {
+                width: 100%;
+                height: 200px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .description-movie {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 10px 0 10px;
+
+                .name-movie {
+                    color: $maintext;
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+
+                .time-movie {
+                    color: $maintext;
+                    font-size: 15px;
+                    display: none;
+                }
+            }
+
+            .control {
+                margin-top: 50px;
+                display: none;
+
+                .control-inner {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 15px;
+                    padding-bottom: 10px;
+
+                    .control-1 {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #fff;
+                        background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+                        box-shadow: -2.062026023864746px -2.062026023864746px 103.10130310058594px 0px rgba(255, 255, 255, 0.02) inset;
+                        backdrop-filter: blur(4.263156890869141px);
+                        font-size: 18px;
+                    }
+
+                    .c-2 {
+                        background: radial-gradient(107.32% 141.42% at 0% 0%, #0CF9F0 0%, #D686FF 100%);
+                        box-shadow: -2.5393476486206055px -2.5393476486206055px 126.9673843383789px 0px rgba(255, 255, 255, 0.02) inset;
+                        backdrop-filter: blur(5.250000476837158px);
+                    }
+                }
+            }
+
+            &:hover {
+                transition: all 0.5s;
+                backdrop-filter: blur(4px);
+                box-shadow: 0 5px 50px rgba(0, 0, 0, 0.5);
+                .control {
+                    display: block;
+                }
+
+                .time-movie {
+                    display: block;
+                }
+            }
+
+        }
+
+        .btns-swiper {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+            top: 150px;
+            padding: 0 45px;
+
+            .swiper-button-next {
+                color: $maintext;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-weight: bold;
+                transition: all 0.5s;
+                background-color: #000;
+                opacity: 0.8;
+
+            }
+
+            .swiper-button-prev {
+                color: $maintext;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-weight: bold;
+                transition: all 0.5s;
+                background-color: #000;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .slide-movie{
+        width: 100% !important;
+    }
+
+    .btns-swiper{
+        padding: 0 10px !important;
+    }
+}

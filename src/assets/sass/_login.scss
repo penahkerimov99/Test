@@ -1,0 +1,145 @@
+.bg-login {
+    background-color: $mainbg2;
+    opacity: 0.6;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.login-cart {
+    width: 370px;
+    height: 480px;
+    position: fixed;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+    box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+    backdrop-filter: blur(7.5px);
+    transition: all 0.5s;
+
+    .login-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+        padding: 25px;
+
+        .close {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: $maintext;
+            position: absolute;
+            z-index: 2;
+            right: -10px;
+            top: -10px;
+            background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+            box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+            backdrop-filter: blur(7.5px);
+            cursor: pointer;
+        }
+
+        h1 {
+            color: $maintext;
+            text-align: center;
+        }
+
+        p {
+            color: $maintext;
+        }
+
+        .log-form {
+            width: 100%;
+
+            .form-1 {
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+
+                label {
+                    color: $maintext;
+                }
+
+                input {
+                    width: 100%;
+                    height: 40px;
+                    background-color: #000;
+                    border: none;
+                    border-radius: 10px;
+                    outline: none;
+                    color: $maintext;
+                    padding-left: 8px;
+                }
+            }
+
+            .forgot {
+                width: 100%;
+                color: $maintext;
+                text-align: end;
+                padding-top: 8px;
+            }
+
+            .btns-form {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 15px;
+
+                .signin {
+                    background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+                    box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+                    backdrop-filter: blur(7.5px);
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 30px;
+                    color: $maintext;
+                }
+
+                .signup {
+                    padding: 10px 25px;
+                    border: none;
+                    border-radius: 30px;
+                    color: $maintext;
+                    background: transparent;
+                    transition: all 0.5s;
+
+                    &:hover {
+                        background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.00) 100%);
+                        box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+                        backdrop-filter: blur(7.5px);
+                    }
+                }
+
+            }
+
+        }
+
+        .ending{
+            width: 100%;
+            color: $maintext;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+   .login-cart{
+    width: 90%;
+   } 
+}
